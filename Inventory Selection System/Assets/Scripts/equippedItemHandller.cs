@@ -263,7 +263,8 @@ public class equippedItemHandller : MonoBehaviour
             }
             else
             {
-                populate.items[cE.currentHead].equiped = false;
+                if(cE.currentHead!=-1)
+                    populate.items[cE.currentHead].equiped = false;
                 cE.currentHead = item.itemNo;
             }
         }
@@ -276,7 +277,8 @@ public class equippedItemHandller : MonoBehaviour
             }
             else
             {
-                populate.items[cE.currentBody].equiped = false;
+                if (cE.currentBody != -1)
+                    populate.items[cE.currentBody].equiped = false;
                 cE.currentBody = item.itemNo;
             }
         }
@@ -289,7 +291,8 @@ public class equippedItemHandller : MonoBehaviour
             }
             else
             {
-                populate.items[cE.currentFeet].equiped = false;
+                if (cE.currentFeet != -1)
+                    populate.items[cE.currentFeet].equiped = false;
                 cE.currentFeet = item.itemNo;
             }
         }
@@ -311,7 +314,8 @@ public class equippedItemHandller : MonoBehaviour
                 cE.currentWeapon2 = item.itemNo;
             else
             {
-                populate.items[cE.currentWeapon1].equiped = false;
+                if (cE.currentWeapon1 != -1)
+                    populate.items[cE.currentWeapon1].equiped = false;
                 cE.currentWeapon1 = item.itemNo;
             }
         }
