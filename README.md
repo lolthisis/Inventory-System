@@ -11,6 +11,15 @@ Dodge and critical strike stacks additively with each agi point.
 #If there are both weapon slot equipped,
 And we are selecting another weapon it will be compared with the weapon in slot one.
 
+#Filter System:
+1. Class
+Common-Uncommon-Rare-Mythical-Legendary
+
+2. Type
+Head-Body-Weapon-Feet
+
+3. Alphabetically
+A-Z
+
 Todo:
--Filter system
 -Drag Drop system

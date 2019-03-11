@@ -69,6 +69,7 @@
     <Compile Include="Assets\LitJson\Lexer.cs" />
     <Compile Include="Assets\LitJson\ParserToken.cs" />
     <Compile Include="Assets\Scripts\equippedItemHandller.cs" />
+    <Compile Include="Assets\Scripts\filtersHandler.cs" />
     <Compile Include="Assets\Scripts\ItemConfig.cs" />
     <Compile Include="Assets\Scripts\itemHandler.cs" />
     <Compile Include="Assets\Scripts\populateInventory.cs" />

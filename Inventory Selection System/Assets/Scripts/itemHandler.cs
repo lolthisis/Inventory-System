@@ -17,7 +17,7 @@ public class itemHandler : MonoBehaviour, IPointerDownHandler
     [SerializeField]
     Color[] rarity;
 
-    public int rarityNo;
+    public int rarityNo,typeNo;
     public GameObject selected;
     public bool equiped;
 
@@ -52,6 +52,16 @@ public class itemHandler : MonoBehaviour, IPointerDownHandler
         else if (ic.items[no].item_class == ItemClass.Legendary)
             rarityNo = 4;
 
+        if (ic.items[no].slot == ItemSlot.Head)
+            typeNo = 0;
+        else if (ic.items[no].slot == ItemSlot.Body)
+            typeNo = 1;
+        else if (ic.items[no].slot == ItemSlot.Weapon)
+            typeNo = 2;
+        else if (ic.items[no].slot == ItemSlot.Feet)
+            typeNo = 3;
+
+        this.name = ic.items[no].item_name;
         this.GetComponent<RawImage>().color = rarity[rarityNo];
     }
 

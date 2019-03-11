@@ -11,6 +11,9 @@ public class populateInventory : MonoBehaviour
     GameObject container, itemPrefab;
 
     public List<itemHandler> items;
+
+    [SerializeField]
+    filtersHandler fH;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +36,8 @@ public class populateInventory : MonoBehaviour
             obj.GetComponent<itemHandler>().initialize(i);
             items.Add(obj.GetComponent<itemHandler>());
         }
+        fH.filterT();
+
     }
 
     // Update is called once per frame
