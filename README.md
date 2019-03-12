@@ -2,7 +2,7 @@
 
 Made with Unity Version 2018.3.4f1
 
-#############################
+
 1 STR = 12 HP, 
 
 1 INT = 14 MANA, 
@@ -24,4 +24,5 @@ Head-Body-Weapon-Feet
 
 3. By Alphabetically, 
 A-Z
-#############################
+
+
