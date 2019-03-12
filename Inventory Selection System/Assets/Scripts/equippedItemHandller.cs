@@ -201,6 +201,8 @@ public class equippedItemHandller : MonoBehaviour
                 current = cE.currentWeapon1;
             if (cE.currentWeapon1 == currentlySelected.itemNo)
                 return;
+            else if (cE.currentWeapon2 == currentlySelected.itemNo)
+                return;
             else
                 current = cE.currentWeapon1;
         }
@@ -249,6 +251,7 @@ public class equippedItemHandller : MonoBehaviour
         currentlySelected = item;
 
         currentlySelected.selected.SetActive(true);
+        
         calculateStats();
     }
 
@@ -324,8 +327,65 @@ public class equippedItemHandller : MonoBehaviour
         calculateStats();
     }
 
+    public void itemDropped(itemHandler item, ItemSlot iSlot, int weaponSlot)
+    {
+        if (iSlot == ItemSlot.Head)
+        {
+            if (cE.currentHead != -1)
+                populate.items[cE.currentHead].equiped = false;
+            cE.currentHead = item.itemNo;
+            populate.items[cE.currentHead].equiped = true;
+        }
+        else if (iSlot == ItemSlot.Body)
+        {
+            if (cE.currentBody != -1)
+                populate.items[cE.currentBody].equiped = false;
+            cE.currentBody = item.itemNo;
+            populate.items[cE.currentBody].equiped = true;
+        }
+        else if (iSlot == ItemSlot.Feet)
+        {
+            if (cE.currentFeet != -1)
+                populate.items[cE.currentFeet].equiped = false;
+            cE.currentFeet = item.itemNo;
+            populate.items[cE.currentFeet].equiped = true;
+        }
+        else if (iSlot == ItemSlot.Weapon)
+        {
+            if (weaponSlot == 2)
+            {
+                if(cE.currentWeapon1==item.itemNo)
+                {
+                    populate.items[cE.currentWeapon1].equiped = false;
+                    cE.currentWeapon1 = -1;
+                    weapon1.sprite = null;
+                }
+                if (cE.currentWeapon2 != -1)
+                    populate.items[cE.currentWeapon2].equiped = false;
+                cE.currentWeapon2 = item.itemNo;
+                populate.items[cE.currentWeapon2].equiped = true;
+            }
+            else
+            {
+                if (cE.currentWeapon2 == item.itemNo)
+                {
+                    populate.items[cE.currentWeapon2].equiped = false;
+                    cE.currentWeapon2 = -1;
+                    weapon2.sprite = null;
+                }
+                if (cE.currentWeapon1 != -1)
+                    populate.items[cE.currentWeapon1].equiped = false;
+                cE.currentWeapon1 = item.itemNo;
+                populate.items[cE.currentWeapon1].equiped = true;
+            }
+        }
+        currentlySelected = item;
+        calculateStats();
+    }
+
     private void OnApplicationQuit()
     {
+        //Save
         File.WriteAllText(Application.streamingAssetsPath+ "/currentlyEquipped.json", JsonMapper.ToJson(cE).ToString());
     }
 }

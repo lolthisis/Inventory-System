@@ -1,12 +1,14 @@
 ﻿<Properties StartupConfiguration="{F1EF7C8E-2CF6-6789-8ED5-F049FD785EBF}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/filtersHandler.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/slotHandler.cs">
     <Files>
       <File FileName="Assets/Scripts/ItemConfig.cs" Line="29" Column="3" />
       <File FileName="Assets/Scripts/selectedItemHandler.cs" Line="55" Column="25" />
-      <File FileName="Assets/Scripts/itemHandler.cs" Line="6" Column="63" />
-      <File FileName="Assets/Scripts/equippedItemHandller.cs" Line="280" Column="35" />
-      <File FileName="Assets/Scripts/populateInventory.cs" Line="23" Column="27" />
-      <File FileName="Assets/filtersHandler.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/itemHandler.cs" Line="37" Column="10" />
+      <File FileName="Assets/Scripts/equippedItemHandller.cs" Line="55" Column="44" />
+      <File FileName="Assets/Scripts/populateInventory.cs" Line="10" Column="21" />
+      <File FileName="Assets/Scripts/filtersHandler.cs" Line="17" Column="28" />
+      <File FileName="Assets/dragHandler.cs" Line="34" Column="63" />
+      <File FileName="Assets/slotHandler.cs" Line="7" Column="18" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,9 +16,17 @@
           <Node name="Inventory Selection System" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True" />
-              <Node name="filtersHandler.cs" selected="True" />
+              <Node name="slotHandler.cs" selected="True" />
             </Node>
           </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="Inventory Selection System" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>

@@ -14,9 +14,12 @@ public class populateInventory : MonoBehaviour
 
     [SerializeField]
     filtersHandler fH;
+
+    selectedItemHandler sIH;
     // Start is called before the first frame update
     void Start()
     {
+        sIH = FindObjectOfType<selectedItemHandler>();
         items = new List<itemHandler>();
         populate();
     }
@@ -36,8 +39,14 @@ public class populateInventory : MonoBehaviour
             obj.GetComponent<itemHandler>().initialize(i);
             items.Add(obj.GetComponent<itemHandler>());
         }
+        StartCoroutine(selectFirst());
         fH.filterT();
+    }
 
+    IEnumerator selectFirst()
+    {
+        yield return new WaitForSeconds(0.75f);
+        sIH.itemSelected(items[0]);
     }
 
     // Update is called once per frame

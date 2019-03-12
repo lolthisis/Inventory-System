@@ -16,6 +16,7 @@ public class selectedItemHandler : MonoBehaviour
 
     [SerializeField]
     equippedItemHandller eIH;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +26,13 @@ public class selectedItemHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (currentItem)
+        {
+            if (currentItem.equiped)
+                equip.text = "Unequip";
+            else
+                equip.text = "Equip";
+        }
     }
 
     itemHandler currentItem;
@@ -54,10 +61,6 @@ public class selectedItemHandler : MonoBehaviour
     {
         eIH.itemEquipped(currentItem);
         currentItem.equiped = !currentItem.equiped;
-        if (currentItem.equiped)
-            equip.text = "Unequip";
-        else
-            equip.text = "Equip";
-
     }
+
 }

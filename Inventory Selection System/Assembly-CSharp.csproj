@@ -68,12 +68,14 @@
     <Compile Include="Assets\LitJson\JsonWriter.cs" />
     <Compile Include="Assets\LitJson\Lexer.cs" />
     <Compile Include="Assets\LitJson\ParserToken.cs" />
+    <Compile Include="Assets\Scripts\dragHandler.cs" />
     <Compile Include="Assets\Scripts\equippedItemHandller.cs" />
     <Compile Include="Assets\Scripts\filtersHandler.cs" />
     <Compile Include="Assets\Scripts\ItemConfig.cs" />
     <Compile Include="Assets\Scripts\itemHandler.cs" />
     <Compile Include="Assets\Scripts\populateInventory.cs" />
     <Compile Include="Assets\Scripts\selectedItemHandler.cs" />
+    <Compile Include="Assets\Scripts\slotHandler.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>/Users/manish/Downloads/Work/Inventory-System/Inventory Selection System/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - dragged
+  - head
+  - body
+  - feet
+  - weapon1
+  - weapon2
   layers:
   - Default
   - TransparentFX

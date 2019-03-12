@@ -20,6 +20,3 @@ Head-Body-Weapon-Feet
 
 3. Alphabetically
 A-Z
-
-Todo:
--Drag Drop system

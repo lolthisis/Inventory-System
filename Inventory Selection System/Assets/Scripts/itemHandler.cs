@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-public class itemHandler : MonoBehaviour, IPointerDownHandler 
+public class itemHandler : MonoBehaviour, IPointerDownHandler
 {
     [SerializeField]
     ItemConfig ic;
@@ -21,11 +21,21 @@ public class itemHandler : MonoBehaviour, IPointerDownHandler
     public GameObject selected;
     public bool equiped;
 
+    [SerializeField]
+    GameObject mouseItem;
+
     selectedItemHandler sIH;
 
     public void OnPointerDown(PointerEventData pointerEventData)
     {
         select();
+        if (mouseItem)
+        {
+            GameObject obj = Instantiate(mouseItem).gameObject;
+            obj.transform.SetParent(this.transform.parent.parent.parent.parent.parent.parent.transform);
+            obj.GetComponent<itemHandler>().initialize(itemNo);
+            obj.GetComponent<dragHandler>().myItem = this;
+        }
     }
 
     // Start is called before the first frame update
