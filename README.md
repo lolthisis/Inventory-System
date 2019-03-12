@@ -2,7 +2,7 @@
 
 Made with Unity Version 2018.3.4f1
 
-
+#############################
 1 STR = 12 HP, 
 
 1 INT = 14 MANA, 
@@ -16,11 +16,12 @@ Dodge and critical strike stacks additively with each agi point.
 And we are selecting another weapon it will be compared with the weapon in slot one.
 
 #Filter System:
-1. Class
+1. By Class, 
 Common-Uncommon-Rare-Mythical-Legendary
 
-2. Type
+2. By Type, 
 Head-Body-Weapon-Feet
 
-3. Alphabetically
+3. By Alphabetically, 
 A-Z
+#############################
