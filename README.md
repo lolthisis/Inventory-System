@@ -1,6 +1,6 @@
 # Inventory-System
 
-Made with Unity Version 2018.3.4f1
+Made with Unity 2018.3.4f1
 
 
 1 STR = 12 HP, 
@@ -15,7 +15,7 @@ Dodge and critical strike stacks additively with each agi point.
 #If there are both weapon slot equipped,
 And we are selecting another weapon it will be compared with the weapon in slot one.
 
-#Filter System:
+## Filter System:
 1. By Class, 
 Common-Uncommon-Rare-Mythical-Legendary
 
